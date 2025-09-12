@@ -1,4 +1,4 @@
-import './styles/Scoreboard.css'
+import '../styles/Scoreboard.css'
 
 function Scoreboard() {
 
