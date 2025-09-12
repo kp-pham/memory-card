@@ -12,4 +12,11 @@ function Card() {
   )
 }
 
+async function request(url) {
+  const response = await fetch(url, { mode: 'cors' })
+  const data = await response.blob();
+
+  console.log(data)
+}
+
 export default Card
