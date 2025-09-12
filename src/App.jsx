@@ -1,11 +1,11 @@
-import { Card, Scoreboard } from './components'
+import { Gameboard, Scoreboard } from './components'
 import './App.css'
 
 function App() {
   return (
     <>
       <Scoreboard/>
-      <Card/>
+      <Gameboard/>
     </>
   )
 }

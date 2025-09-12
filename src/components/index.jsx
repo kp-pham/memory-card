@@ -1,4 +1,4 @@
-import Card from './Card.jsx'
+import Gameboard from './Gameboard.jsx'
 import Scoreboard from './Scoreboard.jsx'
 
-export { Card, Scoreboard }
+export { Gameboard, Scoreboard }
