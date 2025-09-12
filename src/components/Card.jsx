@@ -1,10 +1,12 @@
+
 import '../styles/Card.css'
+import image from '../assets/neuvillette.png'
 
 function Card() {
   return (
     <button>
         <div>
-            <img></img>
+            <img src={image}/>
         </div>
     </button>
   );
