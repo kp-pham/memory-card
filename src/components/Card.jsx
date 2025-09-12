@@ -5,17 +5,23 @@ function Card() {
   const [image, setImage] = useState(null)
 
   useEffect(() => {
+    let imageURL;
+
     async function fetchImage() {
       try {
-        const imageURL = processImage(await requestImage('https://genshin.jmp.blue/characters/neuvillette/gacha-card'))
+        imageURL = processImage(await requestImage('https://genshin.jmp.blue/characters/neuvillette/gacha-card'))
         setImage(imageURL)
       }
       catch(error) {
-        console.log();
+        console.error(error);
       }
     }
 
     fetchImage()
+
+    return () => {
+      URL.revokeObjectURL(imageURL)
+    }
   }, [])
 
   return (
@@ -37,7 +43,5 @@ async function requestImage(url) {
 function processImage(data) {
   return URL.createObjectURL(data)
 }
-
-// console.log(processImage(await requestImage('https://genshin.jmp.blue/characters/neuvillette/gacha-card')))
 
 export default Card
