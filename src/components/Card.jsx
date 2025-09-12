@@ -12,11 +12,19 @@ function Card() {
   )
 }
 
-async function request(url) {
+async function requestImage(url) {
   const response = await fetch(url, { mode: 'cors' })
-  const data = await response.blob();
+  const data = await response.blob()
 
-  console.log(data)
+  return data;
 }
+
+function processImage(data) {
+  const imageURL = URL.createObjectURL(data)
+  
+  return <img src={imageURL}/>
+}
+
+console.log(processImage(await requestImage('https://genshin.jmp.blue/characters/neuvillette/gacha-card')))
 
 export default Card
