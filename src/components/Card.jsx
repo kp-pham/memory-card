@@ -1,8 +1,23 @@
-
+import { useEffect, useState } from 'react'
 import '../styles/Card.css'
-import image from '../assets/neuvillette.png'
 
 function Card() {
+  const [image, setImage] = useState(null)
+
+  useEffect(() => {
+    async function fetchImage() {
+      try {
+        const imageURL = processImage(await requestImage('https://genshin.jmp.blue/characters/neuvillette/gacha-card'))
+        setImage(imageURL)
+      }
+      catch(error) {
+        console.log();
+      }
+    }
+
+    fetchImage()
+  }, [])
+
   return (
     <button className="card-container">
         <div className="card">
@@ -20,11 +35,9 @@ async function requestImage(url) {
 }
 
 function processImage(data) {
-  const imageURL = URL.createObjectURL(data)
-  
-  return <img src={imageURL}/>
+  return URL.createObjectURL(data)
 }
 
-console.log(processImage(await requestImage('https://genshin.jmp.blue/characters/neuvillette/gacha-card')))
+// console.log(processImage(await requestImage('https://genshin.jmp.blue/characters/neuvillette/gacha-card')))
 
 export default Card
