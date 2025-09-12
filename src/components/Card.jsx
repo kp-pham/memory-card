@@ -4,8 +4,8 @@ import image from '../assets/neuvillette.png'
 
 function Card() {
   return (
-    <button>
-        <div>
+    <button className="card-container">
+        <div className="card">
             <img src={image}/>
         </div>
     </button>
