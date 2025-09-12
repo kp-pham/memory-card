@@ -9,7 +9,7 @@ function Card() {
             <img src={image}/>
         </div>
     </button>
-  );
+  )
 }
 
 export default Card
