@@ -1,10 +1,6 @@
-import { useState } from 'react'
 import '../styles/Scoreboard.css'
 
-function Scoreboard() {
-  const [score, setScore] = useState(0)
-  const [bestScore, setBestScore] = useState(0)
-
+function Scoreboard({ score, bestScore }) {
   return (
     <section>
       <p>Score: {score}</p>
