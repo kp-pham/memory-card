@@ -32,9 +32,11 @@ function Gameboard() {
       setShuffled(shuffle(images))
     }, [])
 
+  const reshuffle = () => setShuffled(shuffle(images))
+
   return (
     <section id="card-grid">
-        {shuffled.map(requestURL => <Card requestURL={requestURL}/>)}
+        {shuffled.map(requestURL => <Card requestURL={requestURL} onClick={reshuffle} />)}
     </section>
   );
 }

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import '../styles/Card.css'
 
-function Card({ requestURL }) {
+function Card({ requestURL, onClick }) {
   const [image, setImage] = useState(null)
 
   useEffect(() => {
@@ -25,7 +25,7 @@ function Card({ requestURL }) {
   }, [requestURL])
 
   return (
-    <button className="card-container">
+    <button className="card-container" onClick={onClick}>
         <div className="card">
             <img src={image}/>
         </div>
