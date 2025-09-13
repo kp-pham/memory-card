@@ -4,7 +4,7 @@ import icon from '../assets/paimon-icon.png'
 function Scoreboard({ score, bestScore }) {
   return (
     <section id="scoreboard">
-      <div class="branding">
+      <div className="branding">
         <img src={icon}/>
         <h1>Genshin Impact Memory Card Game</h1>
       </div>

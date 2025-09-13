@@ -3,13 +3,12 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 5px;
   background-color: #2d3649;
   color: #d3bb91;
 }
 
 .branding img {
-  width: 50px;
+  width: 40px;
   aspect-ratio: 1 / 1;
 }
 
@@ -22,7 +21,6 @@
 .scores {
   display: flex;
   gap: 10px;
-  padding: 5px;
   font-size: 0.75rem;
 }
 
@@ -41,8 +39,6 @@
   }
 
   .scores {
-    display: flex;
-    gap: 10px;
     padding: 20px;
     font-size: 1rem;
   }
