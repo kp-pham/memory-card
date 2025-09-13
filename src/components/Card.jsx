@@ -22,7 +22,7 @@ function Card({ requestURL }) {
     return () => {
       URL.revokeObjectURL(imageURL)
     }
-  }, [])
+  }, [requestURL])
 
   return (
     <button className="card-container">
