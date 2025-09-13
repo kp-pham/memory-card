@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Card from './Card.jsx'
 import '../styles/Gameboard.css'
 
@@ -9,6 +10,8 @@ const images = [
 ]
 
 function Gameboard() {
+  const [shuffled, setShuffled] = useState([])
+
   return (
     <section>
         <Card requestURL={images[0]}/>
