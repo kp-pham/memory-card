@@ -24,6 +24,20 @@
   font-size: 0.75rem;
 }
 
+@media (min-width: 600px) {
+  .branding img {
+    width: 60px;
+  }
+
+  .branding {
+    font-size: 0.75rem;
+  }
+
+  .scores {
+    font-size: 1rem;
+  }
+}
+
 @media (min-width: 1000px) {
   #scoreboard {
     flex-direction: row;
@@ -40,6 +54,5 @@
 
   .scores {
     padding: 20px;
-    font-size: 1rem;
   }
 }

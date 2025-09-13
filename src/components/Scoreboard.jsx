@@ -8,7 +8,7 @@ function Scoreboard({ score, bestScore }) {
         <img src={icon}/>
         <h1>Genshin Impact Memory Card Game</h1>
       </div>
-      <div class="scores">
+      <div className="scores">
         <p>Score: {score}</p>
         <p>Best Score: {bestScore}</p>
       </div>
