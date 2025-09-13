@@ -1,10 +1,17 @@
 import '../styles/Scoreboard.css'
+import icon from '../assets/paimon-icon.png'
 
 function Scoreboard({ score, bestScore }) {
   return (
-    <section>
-      <p>Score: {score}</p>
-      <p>Best Score: {bestScore}</p>
+    <section id="scoreboard">
+      <div class="branding">
+        <img src={icon}/>
+        <h1>Genshin Impact Memory Card Game</h1>
+      </div>
+      <div class="scores">
+        <p>Score: {score}</p>
+        <p>Best Score: {bestScore}</p>
+      </div>
     </section>
   )
 }

@@ -41,7 +41,6 @@ function App() {
   )
 }
 
-
 function shuffle(array) {
   const shuffled = [...array]
 
