@@ -12,6 +12,11 @@ button {
   transform: scale(1.1);
 }
 
+.card-container:focus-visible {
+  outline: none;
+  transform: scale(1.1);
+}
+
 .card {
   clip-path: polygon(50% 0%, 100% 10%, 100% 90%, 50% 100%, 0% 90%, 0% 10%);
   background-color: #566A83;
