@@ -16,6 +16,10 @@ function App() {
   function handleCardClick(character) {
     if (clicked.has(character)) {
       setScore(0)
+
+      if (score > bestScore)
+        setBestScore(score)
+
       setClicked(new Set())
     }
     else {
