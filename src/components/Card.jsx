@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react'
 import '../styles/Card.css'
 
-function Card() {
+function Card({ requestURL }) {
   const [image, setImage] = useState(null)
 
   useEffect(() => {
     let imageURL;
 
-    async function fetchImage() {
+    async function fetchImage(url) {
       try {
-        imageURL = processImage(await requestImage('https://genshin.jmp.blue/characters/neuvillette/gacha-card'))
+        imageURL = processImage(await requestImage(url))
         setImage(imageURL)
       }
       catch(error) {
@@ -17,7 +17,7 @@ function Card() {
       }
     }
 
-    fetchImage()
+    fetchImage(requestURL)
 
     return () => {
       URL.revokeObjectURL(imageURL)

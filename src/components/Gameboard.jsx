@@ -11,7 +11,7 @@ const images = [
 function Gameboard() {
   return (
     <section>
-        <Card/>
+        <Card requestURL={images[0]}/>
     </section>
   );
 }
