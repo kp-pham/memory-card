@@ -12,8 +12,8 @@ function Card({ requestURL }) {
         imageURL = processImage(await requestImage(url))
         setImage(imageURL)
       }
-      catch(error) {
-        console.error(error);
+      catch {
+        setImage('../assets/qiqi.png')
       }
     }
 
