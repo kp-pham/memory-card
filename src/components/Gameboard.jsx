@@ -33,7 +33,7 @@ function Gameboard() {
     }, [])
 
   return (
-    <section>
+    <section id="card-grid">
         {shuffled.map(requestURL => <Card requestURL={requestURL}/>)}
     </section>
   );
