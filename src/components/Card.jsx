@@ -27,10 +27,7 @@ function Card({ requestURL, onClick }) {
   return (
     <button className="card-container" onClick={onClick}>
         <div className="card">
-          <div className="front">
-            <img src={image}/>
-          </div>
-          <div className="back"></div>
+          <img src={image}/>
         </div>
     </button>
   )

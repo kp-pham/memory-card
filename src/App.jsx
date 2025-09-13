@@ -5,7 +5,7 @@ import './App.css'
 
 function App() {
   const [score, setScore] = useState(0);
-  const [bestScore, setBestScore] = useState(0);
+  const [bestScore, setBestScore] = useState(0)
   const [shuffled, setShuffled] = useState([])
 
   useEffect(() => {
@@ -13,7 +13,7 @@ function App() {
   }, [])
 
   const handleCardClick = () => setShuffled(shuffle(characterData))
-
+  
   return (
     <>
       <Scoreboard score={score} bestScore={bestScore}/>
