@@ -13,7 +13,21 @@ function App() {
     setShuffled(shuffle(characterData))
   }, [])
 
-  const handleCardClick = () => setShuffled(shuffle(characterData))
+  function handleCardClick(character) {
+    if (clicked.has(character)) {
+      setScore(0)
+      setClicked(new Set())
+    }
+    else {
+      const previouslyClicked = new Set(clicked)
+      previouslyClicked.add(character)
+
+      setScore(score + 1)
+      setClicked(previouslyClicked)
+    }
+
+    setShuffled(shuffle(characterData))
+  }
   
   return (
     <>
@@ -22,6 +36,7 @@ function App() {
     </>
   )
 }
+
 
 function shuffle(array) {
   const shuffled = [...array]
