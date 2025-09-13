@@ -1,23 +1,49 @@
 #scoreboard {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 25px;
+  gap: 5px;
   background-color: #2d3649;
   color: #d3bb91;
 }
 
 .branding img {
-  width: 75px;
+  width: 50px;
   aspect-ratio: 1 / 1;
 }
 
 .branding {
   display: flex;
+  align-items: center;
+  font-size: 0.5rem;
 }
 
 .scores {
   display: flex;
   gap: 10px;
-  padding: 20px;
+  padding: 5px;
+  font-size: 0.75rem;
+}
+
+@media (min-width: 1000px) {
+  #scoreboard {
+    flex-direction: row;
+    gap: 25px;
+  }
+
+  .branding img {
+    width: 75px;
+  }
+
+  .branding {
+    font-size: 1rem;
+  }
+
+  .scores {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    font-size: 1rem;
+  }
 }
