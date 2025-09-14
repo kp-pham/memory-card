@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Gameboard, Scoreboard } from './components'
 import characterData from './data/characters.json'
-import './App.css'
 
 function App() {
   const [score, setScore] = useState(0)
