@@ -4,8 +4,8 @@ import characterData from './data/characters.json'
 import './App.css'
 
 function App() {
-  const [score, setScore] = useState(0);
-  const [bestScore, setBestScore] = useState(0)
+  const [score, setScore] = useState(0)
+  const [bestScore, setBestScore] = useState(loadBestScore)
   const [shuffled, setShuffled] = useState([])
   const [clicked, setClicked] = useState(new Set());
 
@@ -17,8 +17,10 @@ function App() {
     if (clicked.has(character)) {
       setScore(0)
 
-      if (score > bestScore)
-        setBestScore(score)
+      if (score > bestScore) {
+        setBestScore(score);
+        saveBestScore(score);
+      }
 
       setClicked(new Set())
     }
@@ -50,6 +52,16 @@ function shuffle(array) {
   }
 
   return shuffled;
+}
+
+function loadBestScore() {
+  const result = localStorage.getItem("bestScore");
+  return result !== null ? result : 0
+}
+
+function saveBestScore(bestScore) {
+  console.log("here")
+  localStorage.setItem("bestScore", bestScore);
 }
 
 export default App
