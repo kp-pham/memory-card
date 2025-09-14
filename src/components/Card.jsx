@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import fallback from '../assets/qiqi.png'
 import '../styles/Card.css'
 
 function Card({ requestURL, onClick }) {
@@ -13,7 +14,7 @@ function Card({ requestURL, onClick }) {
         setImage(imageURL)
       }
       catch {
-        setImage('../assets/qiqi.png')
+        setImage(null)
       }
     }
 
@@ -27,7 +28,7 @@ function Card({ requestURL, onClick }) {
   return (
     <button className="card-container" onClick={onClick}>
         <div className="card">
-          <img src={image}/>
+          <img src={image !== null ? image : fallback}/>
         </div>
     </button>
   )
@@ -35,6 +36,10 @@ function Card({ requestURL, onClick }) {
 
 async function requestImage(url) {
   const response = await fetch(url, { mode: 'cors' })
+
+  if (!response.ok)
+    throw new Error();
+
   const data = await response.blob()
 
   return data;
