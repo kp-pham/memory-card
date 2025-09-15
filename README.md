@@ -1,6 +1,8 @@
 # memory-card
 The Genshin Impact Memory Card Game features splash arts of Genshin Impact characters for an imaginative twist on the Memory Game. When players select one of the characters on the screen, the characters are randomly rearranged. Players earn points for selecting characters which have not been selected and lose when one of the characters have been selected twice.
 
+Please check out the memory card game at https://kp-pham-memory-card.netlify.app/.
+
 ## Features
 
 - Uses React components and props for conditional rendering
