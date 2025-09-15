@@ -59,7 +59,6 @@ function loadBestScore() {
 }
 
 function saveBestScore(bestScore) {
-  console.log("here")
   localStorage.setItem("bestScore", bestScore);
 }
 

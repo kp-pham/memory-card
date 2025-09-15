@@ -18,7 +18,7 @@ miHoYo does not prohibit non-commercial personal use. Addtionally, you understan
 **© All rights reserved by miHoYo. Other properties belong to their respective owners.**
 
 ## Demo
-
+![Video demonstration of memory card game.](./public/game-demo.gif)
 
 ## Mobile
 ![View of application on mobile screens.](./public/mobile-view.png)
