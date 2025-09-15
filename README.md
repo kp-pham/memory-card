@@ -1,5 +1,13 @@
 # memory-card
+The Genshin Impact Memory Card Game features splash arts of Genshin Impact characters for an imaginative twist on the Memory Game. When players select one of the characters on the screen, the characters are randomly rearranged. Players earn points for selecting characters which have not been selected and lose when one of the characters have been selected twice.
 
+## Features
+
+- Uses React components and props for conditional rendering
+- Uses React states and side effects for component lifecycle management 
+- Fetches splash arts of Genshin Impact characters from [Genshin.dev API](https://genshin.dev/)
+- Hover scaling of character cards for interactive user interface
+- Persists best score across sessions with ```localStorage```
 
 ## Disclaimer
 
