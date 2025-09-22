@@ -18,6 +18,38 @@ Please check out the memory card game at https://kp-pham-memory-card.netlify.app
 
 **© All rights reserved by miHoYo. Other properties belong to their respective owners.**
 
+## Installation
+
+Clone the repository:
+```bash
+git clone https://github.com/your-username/memory-card.git
+```
+
+Change into the project directory:
+```bash
+cd memory-card
+```
+
+Install packages with npm:
+```bash
+npm install
+```
+
+### Production
+Build the project:
+
+```bash
+npm run build
+```
+
+
+#### Development
+
+Start development server:
+```bash
+npm run dev
+```
+
 ## Demo
 ![Video demonstration of memory card game.](./public/game-demo.gif)
 
