@@ -42,8 +42,7 @@ Build the project:
 npm run build
 ```
 
-
-#### Development
+### Development
 
 Start development server:
 ```bash
